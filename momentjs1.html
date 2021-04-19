@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <style>
+         table, td {
+            border: 1px solid #F1E8E8;
+            border-collapse: collapse;
+            padding: 4px;
+         }
+         table tr:nth-child(odd) {
+            background-color: #CFCACA;
+         }
+         table tr:nth-child(even) {
+            background-color: #C4B4B4;
+         }
+      </style>
+   </head>
+
+   <body>
+      <h1>Dates display between 2021-04-05 and 2021-04-30</h1>
+      <div id="container">
+         <table id="datedetails" ></table>
+      </div>
+      <script type="text/JavaScript">
+         function getDaterange(start, end, arr) {
+            if (!moment(start).isSameOrAfter(end)) {
+               if (arr.length==0) arr.push(moment(start).format("dddd, MMMM Do YYYY, h:mm:ss a"));
+               var next = moment(start).add(1, 'd');
+               arr.push(next.format("dddd, MMMM Do YYYY, h:mm:ss a"));
+               getDaterange(next, end, arr);
+            } else {
+               return arr;
+            }
+            return arr;
+         }
+         var a = getDaterange("2021-04-05", "2021-04-30", []);
+         var tr = "";
+         for (var i = 0; i<a.length;i++ ) {
+            tr += "<tr><td>"+a[i]+"</td></tr>";
+         }
+         document.getElementById("datedetails").innerHTML = tr;
+      </script>
+   </body>
+</html>

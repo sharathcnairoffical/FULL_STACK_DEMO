@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <h2>JSON Datatype explore</h2>
+</head>
+<body>
+<div id="1">
+	<h2>hello</h2>
+</div>
+<div id="2">
+
+</div>
+
+</body>
+<script>
+var obj = { name: "Sharath", age: 23, city: "Trivandrum" };
+var myJSON = JSON.stringify(obj);
+document.getElementById("1").innerHTML = myJSON;
+var obj1 = { first_name: "Sharath",middle_name: null, last_name: "Nair", age: 23, city: "Trivandrum" };
+  var myJSON1 = JSON.stringify(obj1);
+  document.getElementById("2").innerHTML = myJSON1;
+
+</script>
+</html>

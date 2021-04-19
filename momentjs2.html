@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moment.js</title>
+  </head>
+  <body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+
+      const today = moment();
+      console.log("Today's date is: " + today.format('YYYY-MM-DD'));
+
+      const nextWeek = today.add(7, 'days');
+      console.log(nextWeek.format('dddd Do MMMM, YYYY')); //next week
+
+      const prevWeek = today.subtract(7, 'days');
+      console.log(nextWeek.format('dddd Do MMMM, YYYY')); //previous week
+
+    </script>
+  </body>
+</html>

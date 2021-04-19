@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>String_Functions</h2>
+
+<p id="demo"></p>
+<script>
+var str = "Hello Sharath Chandran Nair!";
+var pos = str.search("Nair");
+document.getElementById("demo").innerHTML = pos;
+</script>
+<div id="1">
+  <script>
+      var str = "Apple, Banana, Kiwi,Orange";
+      var res = str.slice(6, 13);
+      document.getElementById("1").innerHTML=res;
+
+  </script>
+</div>
+
+<div id="2">
+  <script>
+    var res1 = str.substring(14)
+    document.getElementById("2").innerHTML=res1;
+  </script>
+</div>
+
+<div id="3">
+  <script>
+    var res2 = str.substr(7, 6);   //second parameter denotes the length
+    document.getElementById("3").innerHTML=res2;
+  </script>
+</div>
+
+<div id="4">
+  <script>
+    str = "Hello Moto this is Google";
+    var n = str.replace("Moto", "there")
+    document.getElementById("4").innerHTML=n;
+  </script>
+</div>
+</body>
+</html>
